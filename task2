@@ -1,0 +1,35 @@
+Task 2 solution:
+calculate_weight <- function(my_protein) {
+
+  aminoacids <- aminoacids
+  weight<-aminoacids$`Weight (Da)`
+  aminoacid_name<-aminoacids$`1-Letter Code`
+  my_protein<-strsplit(my_protein, split = "")[[1]]
+
+  protein_weight <- 0
+  for (x in my_protein) {
+
+    if (x %in% aminoacid_name) {
+
+
+
+      aa_weight <- weight[aminoacid_name==x]
+      protein_weight <- protein_weight + aa_weight
+    }
+    else {
+      aa_weight <- 0
+      protein_weight <- 0
+
+    }
+
+  }
+
+  return (protein_weight_kg <- protein_weight/1000)
+}
+
+
+
+calculate_weight(my_protein='FIYINFOLUWA')
+
+
+

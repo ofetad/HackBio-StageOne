@@ -1,27 +1,23 @@
 Task 1 solution:
 
 gc_calculator <- function(input_gene="GCATTTAT") {
-
+  
 gene_split<-strsplit(x=input_gene,split = "")[[1]]
 
 gc_counter <- 0
-for (i in gene_split) {
-  if (i=='G' | i=='C' | i=='c' | i=='g') {
-    gc_counter = gc_counter + 1
-
-
-
-  }
-
+for (nuc in gene_split) {
+  if (nuc=='G' | nuc=='C' | nuc=='c' | nuc=='g') {
+    gc_counter = gc_counter + 1
+    
+    
+  }
+     
 }
 return(gc_counter/length(x=gene_split))
 }
 
 
-
 gc_calculator(input_gene = "GCATTTAT")
-
-
 
 
 
